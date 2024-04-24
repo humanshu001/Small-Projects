@@ -3,7 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Weather</title>
+        <link rel="shortcut icon" href=`${iconurl}` type="image/x-icon">
         <style>
             @import url(https://fonts.googleapis.com/css?family=Roboto:300);
             *{
@@ -374,6 +375,16 @@
             document.querySelector('.pressuretext').innerHTML = `Pressure<br>${pressure} mbar`;
             document.querySelector('#weather-icon').src = iconurl;
             document.querySelector('.card3').innerHTML = status;
+
+            // want to change the favicon as iconurl
+            let link = document.querySelector("link[rel~='icon']");
+            if (!link) {
+              link = document.createElement('link');
+              link.rel = 'icon';
+              document.getElementsByTagName('head')[0].appendChild(link);
+            }
+            link.href = iconurl;
+            
 
         })
 
