@@ -352,7 +352,7 @@
         document.getElementsByClassName('cardm')[0].style.display = 'flex';
           let api_key = 'c2d22f06bd564ed09ad154523242304';
         let location = document.getElementById('place-name').value;
-        let url = `http://api.weatherapi.com/v1/current.json?key=${api_key}&q=${location}&api=no`;
+        let url = `https://api.weatherapi.com/v1/current.json?key=${api_key}&q=${location}&api=no`;
 
         fetch(url)
         .then(response => response.json())
