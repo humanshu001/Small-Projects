@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Notes Taking</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center my-5 m-auto"><div class="badge rounded-pill col-md-7">NOTES TAKING AND PDF MAKER</div></h2>
+        <div class="view-outer-box card" style="border:none;outline:none">
+            <div id="editor" contenteditable="true" class="card view p-3" style="min-height: 400px;border: none;outline:none"></div>
+        </div>
+        <div class="btn-group d-flex justify-content-center flex-wrap my-3">
+            <button id="italic"><i>I</i></button>
+            <button id="bold"><b>B</b></button>
+            <button id="underline"><u>U</u></button>
+            <button id="deleted"><del>A</del></button>
+            <button id="image">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-image" viewBox="0 0 16 16">
+                    <path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"/>
+                    <path d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1z"/>
+                </svg>
+            </button>
+            <button id="list">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list-ul" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+                </svg>
+            </button>  
+            <button id="code">{ }</button>    
+            <button id="paragraph">Paragraph</button>
+            <button id="title">Title</button>
+            <button id="heading">Heading</button>
+            <button id="sub-heading">Sub-heading</button>
+            <button id="normal">Normal</button>
+        </div>
+        <div class="d-flex justify-content-center">
+            <button id="create-pdf" class=" col-md-6">Create PDF</button>
+        </div>
+        
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+<script src="main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</html>
