@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            background-color: #000;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .gas {
+            --blur: 1.75rem;
+            --box-blur: calc(0.5 * var(--blur));
+            --glow: var(--color);
+            --size: 11rem;
+            margin: 10px;
+
+            align-items: center;
+            border-radius: 12px;
+            border: 4px solid currentColor;
+            box-shadow: 
+                inset 0 0 0 2px
+                rgba(0, 0, 0, 0.15),
+                0 0 0 2px rgba(0, 0, 0, 0.15),
+                inset 0 0 var(--box-blur) var(--glow),
+                0 0 var(--box-blur) var(--glow);
+            color: var(--color, white);
+            display: inline-flex;
+            flex-direction: column;
+            font-family: system-ui, sans-serif;
+            height: var(--size);
+            justify-content: space-around;
+            padding: 1rem;
+            width: var(--size);
+        }
+        .gas.number {
+            font-weight: 700;
+        }
+
+        .symbol {
+            font-size: 4rem;
+            font-family: "Neon Glow";
+            text-shadow: 0 0 var(--blur) var(--glow);
+        }
+
+        .gas:nth-child(7n+1) {
+            --color: #00ffff;
+        }
+        
+        .gas:nth-child(7n+2) {
+            --color: #8800ff;   
+        }
+        
+        .gas:nth-child(7n+3) {
+            --color: #33ff00;
+        }
+        
+        .gas:nth-child(7n+4) {
+            --color: #ff00fb;
+        }
+        
+        .gas:nth-child(7n+5) {
+            --color: #ddff00;
+        }
+
+        .gas:nth-child(7n+6) {
+            --color: #ff6600;
+        }
+
+        .gas:nth-child(7n+7) {
+            --color: #0800ff;
+        }
+
+        .gas{
+            filter: brightness(105%);
+            cursor: pointer;
+        }
+        .gas:hover {
+            filter: brightness(120%) drop-shadow(0 0 10px var(--glow));
+        }
+        .mass{
+            margin: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="gas">
+        <span class="number">1</span>
+        <div class="symbol">H</div>
+        <p class="name">Hydrogen</p>
+        <p class="mass">1.008</p>
+    </div>
+    <div class="gas">
+        <span class="number">2</span>
+        <div class="symbol">He</div>
+        <p class="name">Helium</p>
+        <p class="mass">4.0026</p>
+    </div>
+    <div class="gas">
+        <span class="number">3</span>
+        <div class="symbol">Li</div>
+        <p class="name">Lithium</p>
+        <p class="mass">6.94</p>
+    </div>
+    <div class="gas">
+        <span class="number">4</span>
+        <div class="symbol">Be</div>
+        <p class="name">Beryllium</p>
+        <p class="mass">9.0122</p>
+    </div>
+    <div class="gas">
+        <span class="number">5</span>
+        <div class="symbol">B</div>
+        <p class="name">Boron</p>
+        <p class="mass">10.81</p>
+    </div>
+    <div class="gas">
+        <span class="number">6</span>
+        <div class="symbol">C</div>
+        <p class="name">Carbon</p>
+        <p class="mass">12.01</p>
+    </div>
+    <div class="gas">
+        <span class="number">7</span>
+        <div class="symbol">N</div>
+        <p class="name">Nitrogen</p>
+        <p class="mass">14.01</p>
+    </div>
+    <div class="gas">
+        <span class="number">8</span>
+        <div class="symbol">O</div>
+        <p class="name">Oxygen</p>
+        <p class="mass">16.00</p>
+    </div>
+    <div class="gas">
+        <span class="number">9</span>
+        <div class="symbol">F</div>
+        <p class="name">Fluorine</p>
+        <p class="mass">19.00</p>
+    </div>
+    <div class="gas">
+        <span class="number">10</span>
+        <div class="symbol">Ne</div>
+        <p class="name">Neon</p>
+        <p class="mass">20.18</p>
+    </div>
+    <div class="gas">
+        <span class="number">11</span>
+        <div class="symbol">Na</div>
+        <p class="name">Sodium</p>
+        <p class="mass">22.99</p>
+    </div>
+    <div class="gas">
+        <span class="number">12</span>
+        <div class="symbol">Mg</div>
+        <p class="name">Magnesium</p>
+        <p class="mass">24.31</p>
+    </div>
+    <div class="gas">
+        <span class="number">13</span>
+        <div class="symbol">Al</div>
+        <p class="name">Aluminium</p>
+        <p class="mass">26.98</p>
+    </div>
+    <div class="gas">
+        <span class="number">14</span>
+        <div class="symbol">Si</div>
+        <p class="name">Silicon</p>
+        <p class="mass">28.09</p>
+    </div>
+    <div class="gas">
+        <span class="number">15</span>
+        <div class="symbol">P</div>
+        <p class="name">Phosphorus</p>
+        <p class="mass">30.97</p>
+    </div>
+    <div class="gas">
+        <span class="number">16</span>
+        <div class="symbol">S</div>
+        <p class="name">Sulfur</p>
+        <p class="mass">32.07</p>
+    </div>
+    <div class="gas">
+        <span class="number">17</span>
+        <div class="symbol">Cl</div>
+        <p class="name">Chlorine</p>
+        <p class="mass">35.45</p>
+    </div>
+    <div class="gas">
+        <span class="number">18</span>
+        <div class="symbol">Ar</div>
+        <p class="name">Argon</p>
+        <p class="mass">39.95</p>
+    </div>
+    <div class="gas">
+        <span class="number">19</span>
+        <div class="symbol">K</div>
+        <p class="name">Potassium</p>
+        <p class="mass">39.10</p>
+    </div>
+    <div class="gas">
+        <span class="number">20</span>
+        <div class="symbol">Ca</div>
+        <p class="name">Calcium</p>
+        <p class="mass">40.08</p>
+    </div>
+    <div class="gas">
+        <span class="number">21</span>
+        <div class="symbol">Sc</div>
+        <p class="name">Scandium</p>
+        <p class="mass">44.96</p>
+    </div>
+    <div class="gas">
+        <span class="number">22</span>
+        <div class="symbol">Ti</div>
+        <p class="name">Titanium</p>
+        <p class="mass">47.87</p>
+    </div>
+    <div class="gas">
+        <span class="number">23</span>
+        <div class="symbol">V</div>
+        <p class="name">Vanadium</p>
+        <p class="mass">50.94</p>
+    </div>
+    <div class="gas">
+        <span class="number">24</span>
+        <div class="symbol">Cr</div>
+        <p class="name">Chromium</p>
+        <p class="mass">52.00</p>
+    </div>
+    <div class="gas">
+        <span class="number">25</span>
+        <div class="symbol">Mn</div>
+        <p class="name">Manganese</p>
+        <p class="mass">54.94</p>
+    </div>
+    <div class="gas">
+        <span class="number">26</span>
+        <div class="symbol">Fe</div>
+        <p class="name">Iron</p>
+        <p class="mass">55.85</p>
+    </div>
+    <div class="gas">
+        <span class="number">27</span>
+        <div class="symbol">Co</div>
+        <p class="name">Cobalt</p>
+        <p class="mass">58.93</p>
+    </div>
+    <div class="gas">
+        <span class="number">28</span>
+        <div class="symbol">Ni</div>
+        <p class="name">Nickel</p>
+        <p class="mass">58.69</p>
+    </div>
+    <div class="gas">
+        <span class="number">29</span>
+        <div class="symbol">Cu</div>
+        <p class="name">Copper</p>
+        <p class="mass">63.55</p>
+    </div>
+    <div class="gas">
+        <span class="number">30</span>
+        <div class="symbol">Zn</div>
+        <p class="name">Zinc</p>
+        <p class="mass">65.38</p>
+    </div>
+    <div class="gas">
+        <span class="number">31</span>
+        <div class="symbol">Ga</div>
+        <p class="name">Gallium</p>
+        <p class="mass">69.72</p>
+    </div>
+    <div class="gas">
+        <span class="number">32</span>
+        <div class="symbol">Ge</div>
+        <p class="name">Germanium</p>
+        <p class="mass">72.63</p>
+    </div>
+    <div class="gas">
+        <span class="number">33</span>
+        <div class="symbol">As</div>
+        <p class="name">Arsenic</p>
+        <p class="mass">74.92</p>
+    </div>
+    <div class="gas">
+        <span class="number">34</span>
+        <div class="symbol">Se</div>
+        <p class="name">Selenium</p>
+        <p class="mass">78.96</p>
+    </div>
+    <div class="gas">
+        <span class="number">35</span>
+        <div class="symbol">Br</div>
+        <p class="name">Bromine</p>
+        <p class="mass">79.90</p>
+    </div>
+    <div class="gas">
+        <span class="number">36</span>
+        <div class="symbol">Kr</div>
+        <p class="name">Krypton</p>
+        <p class="mass">83.80</p>
+    </div>
+    <div class="gas">
+        <span class="number">37</span>
+        <div class="symbol">Rb</div>
+        <p class="name">Rubidium</p>
+        <p class="mass">85.47</p>
+    </div>
+    <div class="gas">
+        <span class="number">38</span>
+        <div class="symbol">Sr</div>
+        <p class="name">Strontium</p>
+        <p class="mass">87.62</p>
+    </div>
+    <div class="gas">
+        <span class="number">39</span>
+        <div class="symbol">Y</div>
+        <p class="name">Yttrium</p>
+        <p class="mass">88.91</p>
+    </div>
+    <div class="gas">
+        <span class="number">40</span>
+        <div class="symbol">Zr</div>
+        <p class="name">Zirconium</p>
+        <p class="mass">91.22</p>
+    </div>
+    <div class="gas">
+        <span class="number">41</span>
+        <div class="symbol">Nb</div>
+        <p class="name">Niobium</p>
+        <p class="mass">92.91</p>
+    </div>
+    <div class="gas">
+        <span class="number">42</span>
+        <div class="symbol">Mo</div>
+        <p class="name">Molybdenum</p>
+        <p class="mass">95.95</p>
+    </div>
+    <div class="gas">
+        <span class="number">43</span>
+        <div class="symbol">Tc</div>
+        <p class="name">Technetium</p>
+        <p class="mass">98.00</p>
+    </div>
+    <div class="gas">
+        <span class="number">44</span>
+        <div class="symbol">Ru</div>
+        <p class="name">Ruthenium</p>
+        <p class="mass">101.1</p>
+    </div>
+    <div class="gas">
+        <span class="number">45</span>
+        <div class="symbol">Rh</div>
+        <p class="name">Rhodium</p>
+        <p class="mass">102.9</p>
+    </div>
+    <div class="gas">
+        <span class="number">46</span>
+        <div class="symbol">Pd</div>
+        <p class="name">Palladium</p>
+        <p class="mass">106.4</p>
+    </div>
+    <div class="gas">
+        <span class="number">47</span>
+        <div class="symbol">Ag</div>
+        <p class="name">Silver</p>
+        <p class="mass">107.9</p>
+    </div>
+    <div class="gas">
+        <span class="number">48</span>
+        <div class="symbol">Cd</div>
+        <p class="name">Cadmium</p>
+        <p class="mass">112.4</p>
+    </div>
+    <div class="gas">
+        <span class="number">49</span>
+        <div class="symbol">In</div>
+        <p class="name">Indium</p>
+        <p class="mass">114.8</p>
+    </div>
+    <div class="gas">
+        <span class="number">50</span>
+        <div class="symbol">Sn</div>
+        <p class="name">Tin</p>
+        <p class="mass">118.7</p>
+    </div>
+    <div class="gas">
+        <span class="number">51</span>
+        <div class="symbol">Sb</div>
+        <p class="name">Antimony</p>
+        <p class="mass">121.8</p>
+    </div>
+    <div class="gas">
+        <span class="number">52</span>
+        <div class="symbol">Te</div>
+        <p class="name">Tellurium</p>
+        <p class="mass">127.6</p>
+    </div>
+    <div class="gas">
+        <span class="number">53</span>
+        <div class="symbol">I</div>
+        <p class="name">Iodine</p>
+        <p class="mass">126.9</p>
+    </div>
+    <div class="gas">
+        <span class="number">54</span>
+        <div class="symbol">Xe</div>
+        <p class="name">Xenon</p>
+        <p class="mass">131.3</p>
+    </div>
+    <div class="gas">
+        <span class="number">55</span>
+        <div class="symbol">Cs</div>
+        <p class="name">Caesium</p>
+        <p class="mass">132.9</p>
+    </div>
+    <div class="gas">
+        <span class="number">56</span>
+        <div class="symbol">Ba</div>
+        <p class="name">Barium</p>
+        <p class="mass">137.3</p>
+    </div>
+    <div class="gas">
+        <span class="number">57</span>
+        <div class="symbol">La</div>
+        <p class="name">Lanthanum</p>
+        <p class="mass">138.9</p>
+    </div>
+    <div class="gas">
+        <span class="number">58</span>
+        <div class="symbol">Ce</div>
+        <p class="name">Cerium</p>
+        <p class="mass">140.1</p>
+    </div>
+    <div class="gas">
+        <span class="number">59</span>
+        <div class="symbol">Pr</div>
+        <p class="name">Praseodymium</p>
+        <p class="mass">140.9</p>
+    </div>
+    <div class="gas">
+        <span class="number">60</span>
+        <div class="symbol">Nd</div>
+        <p class="name">Neodymium</p>
+        <p class="mass">144.2</p>
+    </div>
+    <div class="gas">
+        <span class="number">61</span>
+        <div class="symbol">Pm</div>
+        <p class="name">Promethium</p>
+        <p class="mass">145.0</p>
+    </div>
+    <div class="gas">
+        <span class="number">62</span>
+        <div class="symbol">Sm</div>
+        <p class="name">Samarium</p>
+        <p class="mass">150.4</p>
+    </div>
+    <div class="gas">
+        <span class="number">63</span>
+        <div class="symbol">Eu</div>
+        <p class="name">Europium</p>
+        <p class="mass">152.0</p>
+    </div>
+    <div class="gas">
+        <span class="number">64</span>
+        <div class="symbol">Gd</div>
+        <p class="name">Gadolinium</p>
+        <p class="mass">157.3</p>
+    </div>
+    <div class="gas">
+    <span class="number">65</span>
+        <div class="symbol">Tb</div>
+        <p class="name">Terbium</p>
+        <p class="mass">158.9</p>
+    </div>
+    <div class="gas">
+        <span class="number">66</span>
+        <div class="symbol">Dy</div>
+        <p class="name">Dysprosium</p>
+        <p class="mass">162.5</p>
+    </div>
+    <div class="gas">
+        <span class="number">67</span>
+        <div class="symbol">Ho</div>
+        <p class="name">Holmium</p>
+        <p class="mass">164.9</p>
+    </div>
+    <div class="gas">
+        <span class="number">68</span>
+        <div class="symbol">Er</div>
+        <p class="name">Erbium</p>
+        <p class="mass">167.3</p>
+    </div>
+    <div class="gas">
+        <span class="number">69</span>
+        <div class="symbol">Tm</div>
+        <p class="name">Thulium</p>
+        <p class="mass">168.9</p>
+    </div>
+    <div class="gas">
+        <span class="number">70</span>
+        <div class="symbol">Yb</div>
+        <p class="name">Ytterbium</p>
+        <p class="mass">173.0</p>
+    </div>
+    <div class="gas">
+        <span class="number">71</span>
+        <div class="symbol">Lu</div>
+        <p class="name">Lutetium</p>
+        <p class="mass">175.0</p>
+    </div>
+    <div class="gas">
+        <span class="number">72</span>
+        <div class="symbol">Hf</div>
+        <p class="name">Hafnium</p>
+        <p class="mass">178.5</p>
+    </div>
+    <div class="gas">
+        <span class="number">73</span>
+        <div class="symbol">Ta</div>
+        <p class="name">Tantalum</p>
+        <p class="mass">180.9</p>
+    </div>
+    <div class="gas">
+        <span class="number">74</span>
+        <div class="symbol">W</div>
+        <p class="name">Tungsten</p>
+        <p class="mass">183.8</p>
+    </div>
+    <div class="gas">
+        <span class="number">75</span>
+        <div class="symbol">Re</div>
+        <p class="name">Rhenium</p>
+        <p class="mass">186.2</p>
+    </div>
+    <div class="gas">
+        <span class="number">76</span>
+        <div class="symbol">Os</div>
+        <p class="name">Osmium</p>
+        <p class="mass">190.2</p>
+    </div>
+    <div class="gas">
+        <span class="number">77</span>
+        <div class="symbol">Ir</div>
+        <p class="name">Iridium</p>
+        <p class="mass">192.2</p>
+    </div>
+    <div class="gas">
+        <span class="number">78</span>
+        <div class="symbol">Pt</div>
+        <p class="name">Platinum</p>
+        <p class="mass">195.1</p>
+    </div>
+    <div class="gas">
+        <span class="number">79</span>
+        <div class="symbol">Au</div>
+        <p class="name">Gold</p>
+        <p class="mass">197.0</p>
+    </div>
+    <div class="gas">
+        <span class="number">80</span>
+        <div class="symbol">Hg</div>
+        <p class="name">Mercury</p>
+        <p class="mass">200.6</p>
+    </div>
+    <div class="gas">
+        <span class="number">81</span>
+        <div class="symbol">Tl</div>
+        <p class="name">Thallium</p>
+        <p class="mass">204.4</p>
+    </div>
+    <div class="gas">
+        <span class="number">82</span>
+        <div class="symbol">Pb</div>
+        <p class="name">Lead</p>
+        <p class="mass">207.2</p>
+    </div>
+    <div class="gas">
+        <span class="number">83</span>
+        <div class="symbol">Bi</div>
+        <p class="name">Bismuth</p>
+        <p class="mass">208.9</p>
+    </div>
+    <div class="gas">
+        <span class="number">84</span>
+        <div class="symbol">Po</div>
+        <p class="name">Polonium</p>
+        <p class="mass">209.0</p>
+    </div>
+    <div class="gas">
+        <span class="number">85</span>
+        <div class="symbol">At</div>
+        <p class="name">Astatine</p>
+        <p class="mass">210.0</p>
+    </div>
+    <div class="gas">
+        <span class="number">86</span>
+        <div class="symbol">Rn</div>
+        <p class="name">Radon</p>
+        <p class="mass">222.0</p>
+    </div>
+    <div class="gas">
+        <span class="number">87</span>
+        <div class="symbol">Fr</div>
+        <p class="name">Francium</p>
+        <p class="mass">223.0</p>
+    </div>
+    <div class="gas">
+        <span class="number">88</span>
+        <div class="symbol">Ra</div>
+        <p class="name">Radium</p>
+        <p class="mass">226.0</p>
+    </div>
+    <div class="gas">
+        <span class="number">89</span>
+        <div class="symbol">Ac</div>
+        <p class="name">Actinium</p>
+        <p class="mass">227.0</p>
+    </div>
+    <div class="gas">
+        <span class="number">90</span>
+        <div class="symbol">Th</div>
+        <p class="name">Thorium</p>
+        <p class="mass">232.0</p>
+    </div>
+    <div class="gas">
+        <span class="number">91</span>
+        <div class="symbol">Pa</div>
+        <p class="name">Protactinium</p>
+        <p class="mass">231.0</p>
+    </div>
+    <div class="gas">
+        <span class="number">92</span>
+        <div class="symbol">U</div>
+        <p class="name">Uranium</p>
+        <p class="mass">238.0</p>
+    </div>
+    <div class="gas">
+        <span class="number">93</span>
+        <div class="symbol">Np</div>
+        <p class="name">Neptunium</p>
+        <p class="mass">237.0</p>
+    </div>
+    <div class="gas">
+        <span class="number">94</span>
+        <div class="symbol">Pu</div>
+        <p class="name">Plutonium</p>
+        <p class="mass">244.0</p>
+    </div>
+    <div class="gas">
+        <span class="number">95</span>
+        <div class="symbol">Am</div>
+        <p class="name">Americium</p>
+        <p class="mass">243.0</p>
+    </div>
+    <div class="gas">
+        <span class="number">96</span>
+        <div class="symbol">Cm</div>
+        <p class="name">Curium</p>
+        <p class="mass">247.0</p>
+    </div>
+    <div class="gas">
+        <span class="number">97</span>
+        <div class="symbol">Bk</div>
+        <p class="name">Berkelium</p>
+        <p class="mass">247.0</p>
+    </div>
+    <div class="gas">
+        <span class="number">98</span>
+        <div class="symbol">Cf</div>
+        <p class="name">Californium</p>
+        <p class="mass">251.0</p>
+    </div>
+    <div class="gas">
+        <span class="number">99</span>
+        <div class="symbol">Es</div>
+        <p class="name">Einsteinium</p>
+        <p class="mass">252.0</p>
+    </div>
+    <div class="gas">
+        <span class="number">100</span>
+        <div class="symbol">Fm</div>
+        <p class="name">Fermium</p>
+        <p class="mass">257.0</p>
+    </div>
+    <div class="gas">
+        <span class="number">101</span>
+        <div class="symbol">Md</div>
+        <p class="name">Mendelevium</p>
+        <p class="mass">258.0</p>
+    </div>
+    <div class="gas">
+        <span class="number">102</span>
+        <div class="symbol">No</div>
+        <p class="name">Nobelium</p>
+        <p class="mass">259.0</p>
+    </div>
+    <div class="gas">
+        <span class="number">103</span>
+        <div class="symbol">Lr</div>
+        <p class="name">Lawrencium</p>
+        <p class="mass">262.0</p>
+    </div>
+    <div class="gas">
+        <span class="number">104</span>
+        <div class="symbol">Rf</div>
+        <p class="name">Rutherfordium</p>
+        <p class="mass">267.0</p>
+    </div>
+    <div class="gas">
+        <span class="number">105</span>
+        <div class="symbol">Db</div>
+        <p class="name">Dubnium</p>
+        <p class="mass">270.0</p>
+    </div>
+    <div class="gas">
+        <span class="number">106</span>
+        <div class="symbol">Sg</div>
+        <p class="name">Seaborgium</p>
+        <p class="mass">271.0</p>
+    </div>
+    <div class="gas">
+        <span class="number">107</span>
+        <div class="symbol">Bh</div>
+        <p class="name">Bohrium</p>
+        <p class="mass">270.0</p>
+    </div>
+    <div class="gas">
+        <span class="number">108</span>
+        <div class="symbol">Hs</div>
+        <p class="name">Hassium</p>
+        <p class="mass">277.0</p>
+    </div>
+    <div class="gas">
+        <span class="number">109</span>
+        <div class="symbol">Mt</div>
+        <p class="name">Meitnerium</p>
+        <p class="mass">276.0</p>
+    </div>
+    <div class="gas">
+        <span class="number">110</span>
+        <div class="symbol">Ds</div>
+        <p class="name">Darmstadtium</p>
+        <p class="mass">281.0</p>
+    </div>
+    <div class="gas">
+        <span class="number">111</span>
+        <div class="symbol">Rg</div>
+        <p class="name">Roentgenium</p>
+        <p class="mass">280.0</p>
+    </div>
+    <div class="gas">
+        <span class="number">112</span>
+        <div class="symbol">Cn</div>
+        <p class="name">Copernicium</p>
+        <p class="mass">285.0</p>
+    </div>
+    <div class="gas">
+        <span class="number">113</span>
+        <div class="symbol">Nh</div>
+        <p class="name">Nihonium</p>
+        <p class="mass">284.0</p>
+    </div>
+    <div class="gas">
+        <span class="number">114</span>
+        <div class="symbol">Fl</div>
+        <p class="name">Flerovium</p>
+        <p class="mass">289.0</p>
+    </div>
+    <div class="gas">
+        <span class="number">115</span>
+        <div class="symbol">Mc</div>
+        <p class="name">Moscovium</p>
+        <p class="mass">288.0</p>
+    </div>
+    <div class="gas">
+        <span class="number">116</span>
+        <div class="symbol">Lv</div>
+        <p class="name">Livermorium</p>
+        <p class="mass">293.0</p>
+    </div>
+    <div class="gas">
+        <span class="number">117</span>
+        <div class="symbol">Ts</div>
+        <p class="name">Tennessine</p>
+        <p class="mass">294.0</p>
+    </div>
+    <div class="gas">
+        <span class="number">118</span>
+        <div class="symbol">Og</div>
+        <p class="name">Oganesson</p>
+        <p class="mass">294.0</p>
+    </div>
+</body>
+</html>
